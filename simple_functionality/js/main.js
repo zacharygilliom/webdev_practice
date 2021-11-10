@@ -1,17 +1,24 @@
-function getGreeting(text, element) {
-	if (text.length >1) {
-		var output = text[0] + "<BR>";
-		for (i = 1; i < text.length; i++) {
-			var output = output+ text[i] + "<BR>";
-		}
-	} else {
-		var output = text[0]
-	}
-	document.getElementById(element).innerHTML = output;
+function welcomeGreet(welcomeMessage) {
+	document.getElementById("welcome-greet-message").innerHTML = welcomeMessage;
+}
+function carGreet(carMessage) {
+	document.getElementById("car-greet-message").innerHTML = carMessage;
 }
 
-var input = window.prompt("Please Enter the Prompt you wish to Print: ");
+function displayOutput(car) {
+	//Need to add logic to display additional information about the car.
+}
 
-var text = input.split(" ");
+var welcomeMessage = "Hello! Welcome To The Car Sales Page!";
+welcomeGreet(welcomeMessage);
 
-getGreeting(text, "heading");
+var carMessage = "Below is a listing of all of our available vehicles, type in the box below which one you would like to view in closer detail.";
+carGreet(carMessage);
+
+const form = document.getElementById("form1");
+form.addEventListener("submit", function(event) {
+	event.preventDefault();
+	let car = form.elements['carName'].value;
+	displayOutput(car);
+});
+

@@ -1,8 +1,11 @@
-.mn {
-	color:blue;
-	font-size:15px;
+table, th, td {
+	border:1px solid black;
+	margin: 0 auto;
 }
-#heading {
-	color:blue;
-	font-size:12px;
+div.content {
+	margin:auto;
+	text-align:center;
+}
+#car-greet-message {
+	font-size: 20px;
 }

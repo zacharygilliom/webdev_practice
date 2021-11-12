@@ -1,0 +1,26 @@
+table, th, td {
+	border-spacing: 0;
+	border:1px solid black;
+	margin: 0 auto;
+}
+th, td {
+	padding: 3.5px 30px;
+}
+th:first-child, td:first-child {
+	text-align:left;
+}
+th {
+	background:#395870;
+	color:#fff;
+}
+
+tr:nth-child(even) {
+	background:#f0f0f2;
+}
+div.content {
+	margin:auto;
+	text-align:center;
+}
+#car-greet-message {
+	font-size: 20px;
+}

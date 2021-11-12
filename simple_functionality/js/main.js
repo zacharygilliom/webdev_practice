@@ -6,6 +6,7 @@ function carGreet(carMessage) {
 }
 
 function displayOutput(car) {
+	document.getElementById("car-detail-output").innerHTML = car;	
 	//Need to add logic to display additional information about the car.
 }
 

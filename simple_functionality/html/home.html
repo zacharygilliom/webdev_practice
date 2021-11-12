@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="../css/test.css" />
+		<link rel="stylesheet" href="../css/site.css" />
 	</head>
 	<body>
 		<div class="content">
@@ -17,30 +17,34 @@
 				</div>
 				<div class="car-table">
 					<table>
-						<tr>
-							<th>Brand</th>
-							<th>Year</th>
-							<th>Miles</th>
-							<th>Price</th>
-						</tr>
-						<tr>
-							<td>Subaru Outback</td>
-							<td>2020</td>
-							<td>34,023</td>
-							<td>$24,985</td>
-						</tr>
-						<tr>
-							<td>Toyota Rav4</td>
-							<td>2018</td>
-							<td>68,974</td>
-							<td>$21,150</td>
-						</tr>	
-						<tr>
-							<td>Honda Civic</td>
-							<td>2019</td>
-							<td>53,098</td>
-							<td>$22,995</td>
-						</tr>
+						<thead>
+							<tr>
+								<th>Brand</th>
+								<th>Year</th>
+								<th>Miles</th>
+								<th>Price</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Subaru Outback</td>
+								<td>2020</td>
+								<td>34,023</td>
+								<td>$24,985</td>
+							</tr>
+							<tr>
+								<td>Toyota Rav4</td>
+								<td>2018</td>
+								<td>68,974</td>
+								<td>$21,150</td>
+							</tr>	
+							<tr>
+								<td>Honda Civic</td>
+								<td>2019</td>
+								<td>53,098</td>
+								<td>$22,995</td>
+							</tr>
+						</tbody>
 							
 					</table>
 				</div>
@@ -56,6 +60,10 @@
 						<input type="text" id="carName" name="carName"><br><br>
 					</form>
 				</div>
+			</div>
+			<div class="car-output">
+				<p id="car-detail-output">
+				</p>
 			</div>
 		</div>
 		<script src="../js/main.js"></script>

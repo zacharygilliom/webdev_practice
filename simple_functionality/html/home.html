@@ -5,17 +5,35 @@
 	</head>
 	<body>
 		<div class="content">
-			<div class="welcome-greeter">
+			<div id="welcome-greeter">
 				<h1 id="welcome-greet-message">
 				</h1>	
 				<hr>
 			</div>
-			<div class="car-lister">
-				<div class="car-greeter">
+			<div id="car-selector">
+				<div id="car-selector-message">
+					<p id="car-selector-message-instructions">
+					</p>
+				</div>
+				<div id="car-selector-input">
+					<form id="form1">
+						<label for="carName">Name of Car:</label>
+						<select name="cars" id="cars">
+							<option value="" selected></option>
+							<option value="Honda">Honda</option>
+							<option value="Subaru">Subaru</option>
+							<option value="Toyota">Toyota</option>
+						</select>
+						<button type="button" id="submit" style="font-size: 14px">Submit</button>
+					</form>
+				</div>
+			</div>
+			<div id="car-lister">
+				<div id="car-greeter">
 					<p id="car-greet-message">
 					</p>
 				</div>
-				<div class="car-table">
+				<div id="car-table">
 					<table>
 						<thead>
 							<tr>
@@ -49,19 +67,7 @@
 					</table>
 				</div>
 			</div>
-			<div class="car-selector">
-				<div class="car-selector-message">
-					<p id="car-selector-message-instructions">
-					</p>
-				</div>
-				<div class="car-selector-input">
-					<form id="form1">
-						<label for="carName">Name of Car:</label>
-						<input type="text" id="carName" name="carName"><br><br>
-					</form>
-				</div>
-			</div>
-			<div class="car-output">
+			<div id="car-output">
 				<p id="car-detail-output">
 				</p>
 			</div>

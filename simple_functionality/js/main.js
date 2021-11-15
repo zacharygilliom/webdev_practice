@@ -1,12 +1,28 @@
 function welcomeGreet(welcomeMessage) {
 	document.getElementById("welcome-greet-message").innerHTML = welcomeMessage;
 }
+
 function carGreet(carMessage) {
 	document.getElementById("car-greet-message").innerHTML = carMessage;
 }
 
-function displayModels(models) {
+function insertAfter(referenceNode, newNode) {
+	referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
 
+function displayModels(models) {
+	var sel = document.getElementById("models");
+	if (document.getElementById("model-option")) {
+		while (sel.firstChild) {
+			sel.removeChild(sel.firstChild);
+		}
+	}
+	models.forEach((item) => {
+		var opt = document.createElement("option");
+		opt.setAttribute("id", "model-option");
+		opt.innerHTML = item;
+		sel.appendChild(opt);
+	});
 }
 
 function displayOptionsTable(models) {
@@ -27,7 +43,7 @@ function displayOptionsTable(models) {
 	var thead = table.createTHead();
 	var headerRow = th.insertRow();
 	addCell(headerRow, 'Model');
-	addCell(headerRow, '
+	addCell(headerRow, 'Price');
 
 	models.forEach((item)=>{
 		//var opt = document.createTextNode(item+", ");
@@ -49,8 +65,8 @@ let carModels = {
 	"Toyota":["Rav4", "Tundra", "Tacoma", "Corolla"]
 };
 
-const form = document.getElementById("submit");
-form.addEventListener('click', function(event) {
+const form = document.getElementById("cars");
+form.addEventListener("change", function(event) {
 	event.preventDefault();
 	let carBrand = document.getElementById('cars').value;
 	if (carBrand) { 

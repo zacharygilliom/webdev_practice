@@ -1,3 +1,23 @@
+function parseData(data, carBrand, carModel) {
+	let carSpecs = data["brands"][carBrand];
+	let vehicles = carSpecs["available_vehicles"];
+	vehicles.forEach((item) => {
+		if (item["name"] === carBrand + " " + carModel) {
+			console.log(item["name"]);
+			console.log(item["price"]);
+		}
+	});
+	//return vehicles;
+}
+
+function loadData(carBrand, carModel) {
+	fetch("http://localhost:5000")
+	.then(response => {
+		return response.json();
+	})
+	.then(data => parseData(data, carBrand, carModel));
+}
+
 function welcomeGreet(welcomeMessage) {
 	document.getElementById("welcome-greet-message").innerHTML = welcomeMessage;
 }
@@ -65,13 +85,20 @@ let carModels = {
 	"Toyota":["Rav4", "Tundra", "Tacoma", "Corolla"]
 };
 
-const form = document.getElementById("cars");
-form.addEventListener("change", function(event) {
+const cars = document.getElementById("cars");
+cars.addEventListener("change", function(event) {
 	event.preventDefault();
 	let carBrand = document.getElementById('cars').value;
 	if (carBrand) { 
 		let models = carModels[carBrand];
 		displayModels(models);
 	}
+});
+const models = document.getElementById("form2");
+models.addEventListener("submit", function(event) {
+	event.preventDefault();
+	let carBrand = document.getElementById('cars').value;
+	let carModel = document.getElementById('models').value;
+	loadData(carBrand, carModel);
 });
 

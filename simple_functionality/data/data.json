@@ -1,0 +1,152 @@
+{	"brands":{
+		"Honda":{
+			"models":[
+				"CR-V",
+				"Civic",
+				"Accord",
+				"Passport"
+			],
+			"available_vehicles": [{
+				"name":"Honda CR-V",
+				"year":2011,
+				"miles":170234,
+				"owners":2,
+				"distance_to_you":50,
+				"price":8997
+
+			},
+			{
+				"name":"Honda CR-V",
+				"year":2018,
+				"miles":49132,
+				"owners":1,
+				"distance_to_you":14,
+				"price":20100
+
+			},
+			{
+				"name":"Honda Civic",
+				"year":2008,
+				"miles":205093,
+				"owners":4,
+				"distance_to_you":120,
+				"price":5995
+			},
+			{
+				"name":"Honda Accord",
+				"year":2021,
+				"miles":1098,
+				"owners":0,
+				"distance_to_you":198,
+				"price":24999
+			},
+			{	"name":"Honda Passport",
+				"year":2017,
+				"miles":35999,
+				"owners":2,
+				"distance_to_you":34,
+				"price":26785
+			}]
+		},
+		"Toyota":{
+			"models":[
+				"Rav4",
+				"Tundra",
+				"Tacoma",
+				"Corolla"
+			],
+				"available_vehicles": [{
+				"name":"Toyota Rav4",
+				"year":2011,
+				"miles":170234,
+				"owners":2,
+				"distance_to_you":50,
+				"price":8997
+
+			},
+			{
+				"name":"Toyota Tundra",
+				"year":2018,
+				"miles":49132,
+				"owners":1,
+				"distance_to_you":14,
+				"price":20100
+
+			},
+			{
+				"name":"Toyota Tacoma",
+				"year":2008,
+				"miles":205093,
+				"owners":4,
+				"distance_to_you":120,
+				"price":5995
+			},
+			{
+				"name":"Toyota Corolla",
+				"year":2021,
+				"miles":1098,
+				"owners":0,
+				"distance_to_you":198,
+				"price":24999
+			},
+			{	"name":"Toyota Corolla",
+				"year":2017,
+				"miles":35999,
+				"owners":2,
+				"distance_to_you":34,
+				"price":26785
+			}]
+		},
+		"Subaru":{
+			"models":[
+				"Outback",
+				"Impreza",
+				"Crosstrek",
+				"Forester",
+				"Legacy"
+			],
+			"available_vehicles": [{
+				"name":"Subaru Outback",
+				"year":2011,
+				"miles":170234,
+				"owners":2,
+				"distance_to_you":50,
+				"price":8997
+			},
+			{
+				"name":"Subaru Impreza",
+				"year":2018,
+				"miles":49132,
+				"owners":1,
+				"distance_to_you":14,
+				"price":20100
+			},
+			{
+				"name":"Subaru Crosstrek",
+				"year":2008,
+				"miles":205093,
+				"owners":4,
+				"distance_to_you":120,
+				"price":5995
+			},
+			{
+				"name":"Subaru Forester",
+				"year":2021,
+				"miles":1098,
+				"owners":0,
+				"distance_to_you":198,
+				"price":24999
+			},
+			{	"name":"Subaru Legacy",
+				"year":2017,
+				"miles":35999,
+				"owners":2,
+				"distance_to_you":34,
+				"price":26785
+			}]
+		}
+	}
+}
+
+
+			

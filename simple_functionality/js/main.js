@@ -1,13 +1,13 @@
 function parseData(data, carBrand, carModel) {
 	let carSpecs = data["brands"][carBrand];
 	let vehicles = carSpecs["available_vehicles"];
+	const desiredVehicles = new Array();
 	vehicles.forEach((item) => {
 		if (item["name"] === carBrand + " " + carModel) {
-			console.log(item["name"]);
-			console.log(item["price"]);
+			desiredVehicles.push(item);
 		}
 	});
-	//return vehicles;
+	displayOptionsTable(desiredVehicles);
 }
 
 function loadData(carBrand, carModel) {
@@ -46,31 +46,33 @@ function displayModels(models) {
 }
 
 function displayOptionsTable(models) {
-	/*if (document.getElementById("output-list")) {
-		document.getElementById("output-list").remove();
-	}
-	const newDiv = document.createElement("div");
-	newDiv.setAttribute("id", "output-list");
-	var tableHead = document.createElement("th");
-	*/
-	var table = document.getElementById("car-table");
+	var table = document.getElementById("table-output");
 
 	function addCell(tr, text) {
 		var td = tr.insertCell();
-		td.textContext = text;
+		td.textContent = text;
 		return td;
 	}
-	var thead = table.createTHead();
-	var headerRow = th.insertRow();
-	addCell(headerRow, 'Model');
-	addCell(headerRow, 'Price');
+	var thead = document.getElementById("table-header");
+	var headerRow = thead.insertRow();
 
-	models.forEach((item)=>{
-		//var opt = document.createTextNode(item+", ");
-		newDiv.appendChild(opt);
+	addCell(headerRow, 'Name');
+	addCell(headerRow, 'Price');
+	addCell(headerRow, 'Miles');
+	addCell(headerRow, 'Distance From You');
+	addCell(headerRow, '# of Owners');
+	addCell(headerRow, 'Year');
+
+	var tbody = document.getElementById("table-body");
+	models.forEach(function(item){
+		var row = tbody.insertRow();
+		addCell(row, item['name']);
+		addCell(row, item['price']);
+		addCell(row, item['miles']);
+		addCell(row, item['distance_to_you']);
+		addCell(row, item['owners']);
+		addCell(row, item['year']);
 	});
-	const currentDiv = document.getElementById("car-lister");
-	currentDiv.insertBefore(newDiv, currentDiv.childNodes[0]); 
 }
 
 var welcomeMessage = "Hello! Welcome To The Car Sales Page!";

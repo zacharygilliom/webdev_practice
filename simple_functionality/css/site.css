@@ -1,15 +1,15 @@
-table, th, td {
+table, thead, td {
 	border-spacing: 0;
 	border:1px solid black;
 	margin: 0 auto;
 }
-th, td {
+thead, td {
 	padding: 3.5px 30px;
 }
-th:first-child, td:first-child {
+thead:first-child, td:first-child {
 	text-align:left;
 }
-th {
+thead {
 	background:#395870;
 	color:#fff;
 }

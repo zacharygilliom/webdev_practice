@@ -1,9 +1,9 @@
-table, thead, td {
+table, thead, th, td {
 	border-spacing: 0;
 	border:1px solid black;
 	margin: 0 auto;
 }
-thead, td {
+thead, th {
 	padding: 3.5px 30px;
 }
 thead:first-child, td:first-child {

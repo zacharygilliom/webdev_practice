@@ -37,6 +37,13 @@ function displayModels(models) {
 			sel.removeChild(sel.firstChild);
 		}
 	}
+	var optdefault = document.createElement("option");
+	optdefault.setAttribute("id", "model-option");
+	optdefault.setAttribute("selected", "true");
+	optdefault.innerHTML = "Select a Car Model";
+	optdefault.setAttribute("hidden", "true");
+	optdefault.setAttribute("disabled","true");
+	sel.appendChild(optdefault);
 	models.forEach((item) => {
 		var opt = document.createElement("option");
 		opt.setAttribute("id", "model-option");
@@ -47,22 +54,29 @@ function displayModels(models) {
 
 function displayOptionsTable(models) {
 	var table = document.getElementById("table-output");
+	while (table.rows.length >0) {
+		table.deleteRow(0);
+	}
 
 	function addCell(tr, text) {
 		var td = tr.insertCell();
 		td.textContent = text;
 		return td;
 	}
+	function addHeaderCell(tr, text) {
+		var th = tr.insertCell();
+		th.outerHTML= "<th>"+text+"</th>";
+		return th
+	}
 	var thead = document.getElementById("table-header");
 	var headerRow = thead.insertRow();
-
-	addCell(headerRow, 'Name');
-	addCell(headerRow, 'Price');
-	addCell(headerRow, 'Miles');
-	addCell(headerRow, 'Distance From You');
-	addCell(headerRow, '# of Owners');
-	addCell(headerRow, 'Year');
-
+	addHeaderCell(headerRow, 'Name');
+	addHeaderCell(headerRow, 'Price');
+	addHeaderCell(headerRow, 'Miles');
+	addHeaderCell(headerRow, 'Distance From You');
+	addHeaderCell(headerRow, '# of Owners');
+	addHeaderCell(headerRow, 'Year');
+		
 	var tbody = document.getElementById("table-body");
 	models.forEach(function(item){
 		var row = tbody.insertRow();
@@ -73,6 +87,9 @@ function displayOptionsTable(models) {
 		addCell(row, item['owners']);
 		addCell(row, item['year']);
 	});
+	document.getElementById("form2").reset();
+	document.getElementById("form1").reset();
+			
 }
 
 var welcomeMessage = "Hello! Welcome To The Car Sales Page!";
